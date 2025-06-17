@@ -1,0 +1,95 @@
+🛠 Project Requirements: Super Admin Dashboard with User Access Control
+1. Authentication & Session Management
+Users can log in with email and password.
+
+Role-based login redirect:
+
+Super Admin → /dashboard
+
+Regular User → /user-dashboard
+
+Session persists across refresh using localStorage.
+
+Session expires after 1 hour of inactivity (auto logout).
+
+2. Super Admin Features
+Super Admin can:
+
+View all registered users in a table.
+
+Create new users:
+
+Email input
+
+Auto-generated strong password
+
+Edit user permissions (View, Edit, Create, Delete) for 10 predefined pages.
+
+See a right-side dynamic panel to update permissions.
+
+Users table shows:
+
+Email
+
+Page-wise assigned permissions
+
+3. User Features
+Regular users get access to:
+
+A page (/user-dashboard) showing 10 clickable page options.
+
+If the user has View access, they can access that page.
+
+If not, show "You do not have access" alert.
+
+Users can:
+
+View their profile (except email is read-only).
+
+Change password via OTP verification flow.
+
+4. Dynamic Pages (10 Pages)
+Each page should include:
+
+Page Title
+
+Comment Section
+
+Users with View access: can read comments.
+
+Users with Create access: can add comments.
+
+Users with Edit access: can modify their own comments.
+
+Users with Delete access: can delete their own comments.
+
+Comments are visible to everyone with View access.
+
+Pages:
+
+Products List
+
+Marketing List
+
+Order List
+
+Media Plans
+
+Offer Pricing SKUs
+
+Clients
+
+Suppliers
+
+Customer Support
+
+Sales Reports
+
+Finance & Accounting
+
+5. Modification History (Bonus)
+Each comment should maintain a modification log:
+
+Username and timestamp for each update
+
+Super Admin can hover or click to view the full history.
